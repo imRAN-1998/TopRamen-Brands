@@ -1,0 +1,12 @@
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="loading">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<div *ngIf="error" class="error">
+  <div class="sub-box">
+    <h1><span style="color:red">Error!!</span> occurred while fetching data, try reloading the page</h1>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="main" [@lists] >
+    <h1 style="color:grey" *ngIf="searchedArray.length === 0">No data found</h1>
+    <div  *ngFor="let s of newArray" class="list">
+        <div class="flip-card" >
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1>{{s.struct1.structure1.Brand}}</h1>
+                    <div>
+                        <h1 *ngIf="s.starsArray.length===0" style="color:gold">NA</h1>
+                        <i class="material-icons" style="font-size:35px;color:gold;" *ngFor="let s of s.starsArray">star</i>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                <h1>{{s.struct1.rank === -1 ? 'NA' : '#' + s.struct1.rank}}</h1> 
+                <p>Style : {{s.struct1.structure1.Style}}</p> 
+                <p >{{s.struct1.structure1.Variety}}</p>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>

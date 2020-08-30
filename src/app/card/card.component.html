@@ -1,0 +1,10 @@
+
+
+<div class="container" (mouseover)="over()" (mouseleave)="leave()" (click)="onClick()">
+    <div class="face1" #f1>
+        <h1>{{data.countryName}}</h1>
+    </div>
+    <div class="face2" #f2>
+        <i class="material-icons" style="font-size:35px;color:#e07768;" *ngFor="let s of stars" title="Average Rating">stars</i>
+    </div>
+</div>

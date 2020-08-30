@@ -1,0 +1,31 @@
+<!-- <h1 *ngFor= "let n of countryArray">{{n.Brand}}</h1> -->
+<div class="container" [@bounce]="bounce">
+        <!-- <div routerLink="../../">X</div> -->
+    <div class="header">
+        <h1  style="color:white" class="heading">
+            {{mainCountry}}
+        </h1>
+    </div>
+    <div class="box">
+        <div class="input1">
+            <input type="text" (click)="navTo()" placeholder="Search by brand...">
+        </div>
+        <div class="exit">
+        <i class="material-icons" routerLink="../../">cancel</i>
+        </div>
+        <div class="div1">
+            <span *ngFor="let y of yearArray" (click)="onClick(y)">
+                <h3>{{y===-1 ? 'NA' : y}}</h3>
+                <!-- <i class="material-icons"  style="color:black">events</i> -->
+                <i class="fa fa-calendar"></i>
+            </span>
+        </div>
+        <div class="div" *ngFor="let y of yearArray">
+            <app-year-comp [input1]="y" [input3]="RankingArray" *ngIf="y===yearValue"></app-year-comp>
+        </div>
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
+

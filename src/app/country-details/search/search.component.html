@@ -1,0 +1,13 @@
+<div class="container">
+        <div class="box" [@bounce]>
+            <div class="search-bar">
+                <input type="text" class="search" #search (input)="func1(search)" placeholder="Browse brands here...">
+            </div>
+            <div>
+                <app-search-cards [input1] ="searchedArray" *ngIf="change1"></app-search-cards>
+            </div>
+        </div>
+        <div class="search-exit" routerLink="../">
+            <i class="material-icons" style="color:white">clear</i>
+        </div>
+</div>

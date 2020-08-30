@@ -1,0 +1,43 @@
+
+
+.error{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background: coral;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:10%;
+}
+.sub-box{
+    border-radius: 5px;
+    padding:20px;
+    background: white;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.8);
+    color:black;
+    animation: animee 1s ease-out infinite forwards;
+}
+
+.sub-box:hover{
+    animation: animeee 0.5s ease-in-out forwards;
+}
+
+
+@keyframes animeee{
+    0% {transform:rotate(0deg)}
+    25% {transform:rotate(10deg)}
+    50% {transform:rotate(-10deg)}
+    75% {transform:rotate(10deg)}
+    100% {transform:rotate(0deg)}
+}
+
+@keyframes animee{
+    0% {transform:scale(0.98)}
+    50% {transform:scale(1)}
+    100% {transform:scale(0.98)}
+}

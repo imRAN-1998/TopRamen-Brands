@@ -1,0 +1,17 @@
+<div class="container" [@lists]>
+    <div *ngFor="let n of newArray" class="list">
+        <div>
+            <h2 style="color: white;">{{n.struct1.structure1.Brand}}</h2>
+            <div >
+                <h2 style="color: gold;" *ngIf="n.starsArray.length===0"> NA</h2>
+                <i class="material-icons" style="font-size:35px;color:gold;" *ngFor="let s of n.starsArray">star</i>
+            </div>
+        </div>
+        <div class="details">
+            <h3><span class="pad">Rank</span> : {{n.struct1.rank===-1 ? 'NA' : '#'+n.struct1.rank}} <span style="color:blue">{{n.struct1.year===-1 ? '' : '('+n.struct1.year+')'}}</span></h3>
+            <h4><span class="pad">Style</span> : {{n.struct1.structure1.Style==='NaN' || n.struct1.structure1.Style==='Nan' || n.struct1.structure1.Style==='nan' ? 'NA' : n.struct1.structure1.Style }}</h4>
+            <h4><span class="pad">Variety</span> : {{n.struct1.structure1.Variety}}</h4>
+        </div>
+    </div>
+</div>
+
